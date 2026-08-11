@@ -19,9 +19,19 @@ router=APIRouter()
 )
 
 def get_customers(
+    city:str | None=None,
     db:Session=Depends(get_db)
 ):
-    #get all customers from the database
-    customers=db.query(Customer).all()
+    #start a query for all customer
+    query=db.query(Customer)
 
+    #filter customers by city if a city is provided
+
+    if city:
+        query=query.filter(Customer.city==city)
+
+    #get the final results from the database
+
+    customers=query.all()
+    
     return customers
