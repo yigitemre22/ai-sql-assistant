@@ -1,0 +1,38 @@
+# Environment variables
+.env
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Pytest cache
+.pytest_cache/
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local database files
+*.db
+*.sqlite3
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Secrets and private files
+*.pem
+*.key
