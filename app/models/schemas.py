@@ -15,3 +15,20 @@ class CustomerResponse(BaseModel):
     model_config={
         "from_attributes":True
     }
+
+#schema for incoming sql request
+
+class QueryRequest(BaseModel):
+    #sql aurey sent by the user
+    query:str
+
+#schema for sql query responses
+class QueryResponse(BaseModel):
+    #indicates whether the query was successful
+    success:bool
+
+    #result message
+    message:str
+
+    #query results
+    data:list[dict] | None=None
