@@ -6,6 +6,7 @@ from app.database.connection import get_db
 from app.models.database import Customer
 from app.models.schemas import *
 from app.sql_validator import validate_sql
+from app.services.sql_service import process_question
 
 #create an api router
 
@@ -75,4 +76,26 @@ def execute_query(
         success=True,
         message="Query executed successfully",
         data=data
+    )
+
+#generate and execute sql from a natural language questions
+@router.post(
+    "/ask",
+    response_model=QueryResponse
+)
+def ask_question(
+    request:AskRequest,
+    db:Session=Depends(get_db)
+):
+    #process the user's question with gemini
+    result=process_question(
+        request.question,db
+    )
+
+    #return the ai and database result
+
+    return QueryResponse(
+        success=result['success'],
+        message=result['message'],
+        data=result.get("data")
     )

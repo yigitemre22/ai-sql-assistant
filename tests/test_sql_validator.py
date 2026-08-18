@@ -67,3 +67,10 @@ def test_allowed_join_table():
         "SELECT * FROM customers JOIN customers ON customers.id = customers.id"
     )
     assert valid is True
+
+#test multiple sql statements
+def test_multiple_statements():
+    valid,messagae=validate_sql(
+        "SELECT * FROM customers;DROP TABLE customers"
+    )
+    assert valid is False

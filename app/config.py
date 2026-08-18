@@ -12,9 +12,9 @@ class Settings(BaseSettings):
     db_user: str
     db_password: str
 
-    # OpenAI API key for AI features
+    # gemini API key for AI features
     # It can be empty for now
-    openai_api_key: str | None = None
+    GEMINI_API_KEY: str | None = None
 
     # Read configuration values from the .env file
     model_config = SettingsConfigDict(

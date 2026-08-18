@@ -1,6 +1,9 @@
 #reguler expressions help us chech sql queries
 import re
 
+#import sql parser functions
+from app.sql_parser import parse_sql,get_tables,get_statement_count
+
 #sql commands that our application does not allow
 FORBIDDEN_COMMANDS=[
     "DROP",
@@ -29,8 +32,21 @@ def validate_sql(query:str)->tuple[bool,str]:
     if not query:
         return False,"Sql query can not be empty"
 
+    #parse the sql query before checking security rules
+    is_valid_sql,parsed_query=parse_sql(query)
+
+    #reject the query if the sql syntax is invalid
+    if not is_valid_sql:
+        return False,f"invalid sql syntax{parsed_query}"
+
     #convert the query to uppercase for easier checking
     upper_query=query.upper()
+
+    #check if the query contains multiple sql statements
+    statement_count=get_statement_count(query)
+
+    if statement_count!=1:
+        return False,"only one sql statement is allowed"
 
     #check for forbidden sql commands
     for command in FORBIDDEN_COMMANDS:
@@ -45,32 +61,20 @@ def validate_sql(query:str)->tuple[bool,str]:
     if not upper_query.startswith("SELECT"):
         return False,"only select queries are allowed"
 
-    #check if the query uses an allowed table
-    allowed_table_found=False
+    #get all tables used in the sql query
+    tables=get_tables(parsed_query)
 
-    for table in ALLOWED_TABLES:
-        #convert the table name to uppercase for comparison
-        table_pattern=rf"\bFROM\s+{table.upper()}\b"
+    #convert allowed table names to lowercase
+    allowed_tables=[
+        table.lower()
+        for table in ALLOWED_TABLES
+    ]
 
-        if re.search(table_pattern,upper_query):
-            allowed_table_found=True
-            break
-
-    #reject the query if no allowed table was found
-    if not allowed_table_found:
-        return False,"the query uses a table that is not allowed"
-
-    #find tables used in join statements
-    join_tables=re.findall(
-        r"\bJOIN\s+([A-Z_][A-Z0-9_]*)\b",
-        upper_query
-    )
-
-    #check every join table
-    for table in join_tables:
-        #check if the join table is allowed
-        if table not in [item.upper() for item in ALLOWED_TABLES]:
-            return False,f"the join table'{table} is not allowed"
+    #check every table used in the query
+    for table in tables:
+        #reject the query if the table is not allowed
+        if table.lower() not in allowed_tables:
+            return False,f"the table'{table} is not allowed"
 
     #check if the query already contains a limit clause
     limit_match=re.search(r"\bLIMIT\s+(\d+)",upper_query)

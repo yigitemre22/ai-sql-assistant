@@ -32,3 +32,8 @@ class QueryResponse(BaseModel):
 
     #query results
     data:list[dict] | None=None
+
+#schema for natural language questions
+class AskRequest(BaseModel):
+    #question sent by the user
+    question:str
