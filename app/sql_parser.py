@@ -24,6 +24,15 @@ def get_tables(query):
     #return table names as a list
     return [table.name for table in tables]
 
+#get all columns names used in a aql query
+
+def get_columns(query):
+    #find all column expressions in the sql structure
+    columns=query.find_all(exp.Column)
+
+    #return column names as a list
+    return [column.name for column in columns]
+    
 #check how many sql statements exit in a query
 def get_statement_count(query:str):
     #parse all sql statements in the query

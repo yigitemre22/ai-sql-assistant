@@ -10,6 +10,10 @@ from app.sql_validator import validate_sql
 #text() allows us to execute raw sql safely through sqlalchemy
 from sqlalchemy import text
 
+from app.sql_parser import get_columns,parse_sql
+
+from app.ai.llm import generate_sql,generate_answer
+
 import re
 
 # Words that indicate a write or destructive operation
@@ -39,13 +43,13 @@ UNSUPPORTED_TABLE_WORDS = [
 
 # Columns that are available in each allowed table
 ALLOWED_COLUMNS = {
-    "customers": [
+    "customers": {
         "id",
         "name",
         "email",
         "city",
         "total_spent"
-    ]
+    }
 }
 
 #check whether the user's question asks for a forbidden operation
@@ -82,33 +86,22 @@ def contains_unsupported_table(question: str) -> bool:
     return False
 
 #check whether the generated sql uses unsupported columns
-def contains_unsupported_column(sql:str)->bool:
-    #convert sql to lowercase
-    lower_sql=sql.lower()
+def contains_unsupported_column(parsed_query)->bool:
+    #get all columns used in the sql query
+    columns=get_columns(parsed_query)
 
     #get allowed columns for the customers table
     allowed_columns=ALLOWED_COLUMNS['customers']
 
-    #find column names after common sql keyword
-    column_patterns=[
-        r"\bwhere\s+([a-zA-Z_][a-zA-Z0-9_]*)",
-        r"\band\s+([a-zA-Z_][a-zA-Z0-9_]*)",
-        r"\bor\s+([a-zA-Z_][a-zA-Z0-9_]*)",
-        r"\border\s+by\s+([a-zA-Z_][a-zA-Z0-9_]*)",
-        r"\bgroup\s+by\s+([a-zA-Z_][a-zA-Z0-9_]*)"
-    ]
-    #check each sql pattern
-    for pattern in column_patterns:
-        matches=re.findall(pattern,lower_sql)
-
-        for column in matches:
-            #ignore sql keywords
-            if column in ["select","from","where","and","or"]:
-                continue
-            #reject unsupported columns
-            if column not in allowed_columns:
-                return True
-
+    #check every columns used in the query
+    for column in columns:
+        #ignore wildcard selections such as select *
+        if column=="*":
+            continue
+        #reject columns that are not in our schema
+        if column.lower() not in allowed_columns:
+            return True
+   
     return False
 
 #process a user's natural language question
@@ -138,19 +131,21 @@ def process_question(question:str,db)->dict:
     #generate a sql query using gemini
     sql=generate_sql(question)
 
+    #parse the generated sql
+    is_parsed,parsed_query=parse_sql(sql)
+
+    #stop if the generated sql has invalid syntax
+    if not is_parsed:
+        return{
+            "success":False,
+            "question":question,
+            "sql":sql,
+            "data":None,
+            "message":f"invalid sql syntax:{parsed_query}"
+        }
+
     #check if the generated sql is safe
     is_valid,message=validate_sql(sql)
-
-      #check whether the generated sql uses unsupported columns
-    if contains_unsupported_column(sql):
-        return{
-                "success":False,
-                "question":question,
-                "sql":sql,
-                "data":None,
-                "message":"the query uses a column that is not avaliable"
-            }
-    
 
     #stop the process if the sql is not safe
     if not is_valid:
@@ -160,7 +155,17 @@ def process_question(question:str,db)->dict:
             "sql":sql,
             "message":message
         }
-
+    
+    #check whether the generated sql uses unsupported columns
+    if contains_unsupported_column(parsed_query):
+        return{
+                "success":False,
+                "question":question,
+                "sql":sql,
+                "data":None,
+                "message":"the query uses a column that is not avaliable"
+            }
+    
     try:
         #convert the sql string into a sqlalchemy text object
         statement=text(sql)
@@ -177,12 +182,20 @@ def process_question(question:str,db)->dict:
             for row in result.fetchall()
         ]
 
+        #generate a natural language answer from the database result
+        answer=generate_answer(
+            question=question,
+            sql=sql,
+            data=rows
+        )
+
         #return the database result
         return{
         "success":True,
         "question":question,
         "sql":sql,
         "data":rows,
+        "answer":answer,
         "message":"query executed successfully"
         }
 

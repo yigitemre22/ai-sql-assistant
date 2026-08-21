@@ -97,5 +97,6 @@ def ask_question(
     return QueryResponse(
         success=result['success'],
         message=result['message'],
-        data=result.get("data")
+        data=result.get("data"),
+        answer=result.get("answer")
     )
