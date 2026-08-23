@@ -33,6 +33,30 @@ SessionLocal = sessionmaker(
     autocommit=False
 )
 
+#create a separate postgresql connection url for application data
+APP_DATABASE_URL=(
+    f"postgresql://"
+    f"{settings.app_db_user}:"
+    f"{settings.app_db_password}@"
+    f"{settings.db_host}:"
+    f"{settings.db_port}/"
+    f"{settings.db_name}"
+)
+
+#create the sqlalchemy engine for application data
+#this connection is used for conversation history
+app_engine=create_engine(
+    APP_DATABASE_URL,
+    pool_pre_ping=True
+)
+
+#create a session factory for application data
+AppSessionLocal=sessionmaker(
+    bind=app_engine,
+    autoflush=False,
+    autocommit=False
+)
+
 #create a databese session for api request
 def get_db():
     db=SessionLocal()
@@ -44,3 +68,15 @@ def get_db():
     finally:
         #close the session after the request
         db.close()
+
+#create a database session for application data
+def get_app_db():
+    db=AppSessionLocal()
+
+    try:
+        #give the application session to the api
+        yield db
+    finally:
+        #close the application session after the request
+        db.close()
+    

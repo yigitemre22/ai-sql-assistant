@@ -2,11 +2,15 @@
 from fastapi import APIRouter,Depends
 from sqlalchemy import text
 from sqlalchemy.orm import Session
-from app.database.connection import get_db
-from app.models.database import Customer
+from app.database.connection import get_db,get_app_db
+from app.models.database import Customer,Conversation
 from app.models.schemas import *
 from app.sql_validator import validate_sql
 from app.services.sql_service import process_question
+from app.services.conversation_service import(
+    create_conversation,
+    add_message
+)
 
 #create an api router
 
@@ -85,18 +89,71 @@ def execute_query(
 )
 def ask_question(
     request:AskRequest,
-    db:Session=Depends(get_db)
+    db:Session=Depends(get_db),
+    app_db:Session=Depends(get_app_db)
 ):
-    #process the user's question with gemini
-    result=process_question(
-        request.question,db
+    #create a new conversation if no valid id is provided
+    if request.conversation_id is None or request.conversation_id<=0:
+        conversation=create_conversation(
+            app_db,
+            title=request.question[:50]
+        )
+        conversation_id=conversation.id
+
+    else:
+        #check whether the conversation exist
+        conversation=app_db.get(
+            Conversation,
+            request.conversation_id
+        )
+        #return an error if the conversation does no exist
+        if conversation is None:
+            return QueryResponse(
+                success=False,
+                message="conversation not found",
+                data=None,
+                answer=None,
+                conversation_id=None
+            )
+        
+        conversation_id=request.conversation_id
+
+    #save the user's message
+    add_message(
+        app_db,
+        conversation_id,
+        'user',
+        request.question
     )
 
-    #return the ai and database result
+    #process the question with gemini and the database
+    result=process_question(
+        request.question,
+        db
+    )
+    #stop if the request failed
+    if not result['success']:
+        return QueryResponse(
+            success=False,
+            message=result['message'],
+            data=result.get('data'),
+            answer=result.get('answer'),
+            conversation_id=conversation_id
+        )
 
+    #save the assistant's answer
+    add_message(
+        app_db,
+        conversation_id,
+        'assistant',
+        result['answer']
+    )
+
+    #return the result
     return QueryResponse(
-        success=result['success'],
+        success=True,
         message=result['message'],
-        data=result.get("data"),
-        answer=result.get("answer")
+        data=result.get('data'),
+        answer=result.get('answer'),
+        conversation_id=conversation_id
     )

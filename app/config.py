@@ -12,6 +12,14 @@ class Settings(BaseSettings):
     db_user: str
     db_password: str
 
+    #postgresql settings for application data
+    app_db_user:str
+    app_db_password:str
+
+    #database credentials used by alembic migrations
+    migration_db_user:str
+    migration_db_password:str
+
     # gemini API key for AI features
     # It can be empty for now
     GEMINI_API_KEY: str | None = None
