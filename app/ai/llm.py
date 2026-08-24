@@ -14,7 +14,19 @@ client=genai.Client(
 
 
 #generate sql from a natural language question
-def generate_sql(question:str)->str:
+def generate_sql(question:str,
+                conversation_context:str=""
+                 )->str:
+
+    #add previous conversation context when available
+    previous_context=""
+
+    if conversation_context:
+        previous_context=f"""
+        Previous conversation:
+        {conversation_context}
+        """
+    
     #create instructions for the llm
     prompt=f"""
             You are a SQL assistant.
@@ -22,6 +34,8 @@ def generate_sql(question:str)->str:
     Your job is to convert the user's question into a PostgreSQL SQL query.
 
     {DATABASE_SCHEMA}
+    {previous_context}
+    
 
     Rules:
     - Generate SELECT queries only.
@@ -35,7 +49,9 @@ def generate_sql(question:str)->str:
     - If the user asks for a table that does not exist in the schema, do not guess another table.
     - If the requested table does not exist, return exactly: INVALID_REQUEST
     - If the question cannot be answered using the provided schema, return exactly: INVALID_REQUEST
-
+    - When the user refers to "which one", "who", "that customer", or "those customers", preserve the scope and filters from the previous relevant query.
+    - Do not broaden a previous filtered query to the entire database.
+    - Use previous SQL and database results when they are available in the conversation context.
     User question:
     {question}
     """

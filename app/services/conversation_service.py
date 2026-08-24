@@ -51,3 +51,33 @@ def add_message(
     db.refresh(message)
 
     return message
+
+#build conversation history for the llm
+def build_conversation_context(
+        messages:list[Message]
+)->str:
+    #start with an empty context
+    context=""
+
+    #add each message to the context
+    for message in messages:
+        context+=(
+            f"{message.role}: {message.content}\n"
+        )
+
+    return context
+
+#build conversation history for the llm
+def get_conversation_messages(
+        db:Session,
+        conversation_id:int
+)->list[Message]:
+    #get messages in chronological order
+    messages=(
+        db.query(Message)
+        .filter(Message.conversation_id==conversation_id)
+        .order_by(Message.id.asc())
+        .all()
+    )
+
+    return messages

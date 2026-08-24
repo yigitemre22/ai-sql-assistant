@@ -9,7 +9,9 @@ from app.sql_validator import validate_sql
 from app.services.sql_service import process_question
 from app.services.conversation_service import(
     create_conversation,
-    add_message
+    add_message,
+    get_conversation_messages,
+    build_conversation_context
 )
 
 #create an api router
@@ -118,6 +120,17 @@ def ask_question(
         
         conversation_id=request.conversation_id
 
+    #get previous messages before adding the current question
+    previous_messages=get_conversation_messages(
+        app_db,
+        conversation_id
+    )
+
+    #build context for gemini
+    conversation_context=build_conversation_context(
+        previous_messages
+    )
+
     #save the user's message
     add_message(
         app_db,
@@ -129,8 +142,10 @@ def ask_question(
     #process the question with gemini and the database
     result=process_question(
         request.question,
-        db
+        db,
+        conversation_context
     )
+
     #stop if the request failed
     if not result['success']:
         return QueryResponse(
@@ -141,12 +156,18 @@ def ask_question(
             conversation_id=conversation_id
         )
 
-    #save the assistant's answer
+    #save the assistant's answer and query context
+    assistant_memory=(
+        f"Answer:{result['answer']}\n"
+        f"SQL:{result['sql']}\n"
+        f"Data:{result['data']}"
+    )
+
     add_message(
         app_db,
         conversation_id,
         'assistant',
-        result['answer']
+        assistant_memory
     )
 
     #return the result

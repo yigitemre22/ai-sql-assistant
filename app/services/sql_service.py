@@ -105,7 +105,10 @@ def contains_unsupported_column(parsed_query)->bool:
     return False
 
 #process a user's natural language question
-def process_question(question:str,db)->dict:
+def process_question(question:str,
+                     db,
+                    conversation_context:str=""
+                     )->dict:
 
     #check the user's intent before generating sql
     if contains_forbidden_intent(question):
@@ -129,7 +132,9 @@ def process_question(question:str,db)->dict:
 
   
     #generate a sql query using gemini
-    sql=generate_sql(question)
+    sql=generate_sql(question,
+                     conversation_context
+                     )
 
     #parse the generated sql
     is_parsed,parsed_query=parse_sql(sql)
