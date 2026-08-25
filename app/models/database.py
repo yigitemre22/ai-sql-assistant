@@ -3,7 +3,7 @@ from sqlalchemy import String,Numeric,ForeignKey,DateTime
 from sqlalchemy.orm import DeclarativeBase,Mapped,mapped_column,relationship
 
 #import datetime tools
-from datetime import datetime
+from datetime import datetime,UTC
 
 #base class for all database models
 
@@ -64,7 +64,7 @@ class Conversation(Base):
     #conversation creation time
     created_at:Mapped[datetime]=mapped_column(
         DateTime,
-        default=datetime.utcnow
+        default=lambda:datetime.now(UTC)
     )
     #messages that belong to this conversation
     messages:Mapped[list['Message']]=relationship(
@@ -99,7 +99,7 @@ class Message(Base):
     #message creation time
     created_at:Mapped[datetime]=mapped_column(
         DateTime,
-        default=datetime.utcnow
+        default=lambda:datetime.now(UTC)
     )
     #related conversation
     conversation:Mapped["Conversation"]=relationship(
