@@ -1,0 +1,8 @@
+SELECT * FROM customers
+SELECT * FROM customers LIMIT 50
+SELECT COUNT(*) FROM customers
+SELECT name FROM customers
+SELECT name, email FROM customers WHERE city = 'Istanbul'
+SELECT * FROM customers WHERE total_spent > 5000
+SELECT name FROM customers ORDER BY name
+SELECT name, total_spent FROM customers ORDER BY total_spent DESC LIMIT 1

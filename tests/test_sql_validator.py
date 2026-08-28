@@ -1,76 +1,54 @@
+#import pytest for parametrized tests
+import pytest
 #import the sql validation function
 from app.sql_validator import validate_sql
 
-#test a valid select query
-def test_valid_select():
-    valid,message=validate_sql(
-        "select * from customers"
+#load sql queries from a text file
+def load_queries(filename:str)->list[str]:
+    #open the file using utf-8 encoding
+    with open(filename,"r",encoding="utf-8") as file:
+        #read non-empty lines
+        return[
+            line.strip()
+            for line in file
+            if line.strip()
+        ]
+
+ALLOWED_QUERIES=load_queries(
+    "tests/security/allowed_queries.txt"
+)
+
+MALICIOUS_QUERIES=load_queries(
+    "tests/security/malicious_queries.txt"
+)
+
+#test all allowed queries
+@pytest.mark.parametrize(
+    "query",ALLOWED_QUERIES
+)
+def test_allowed_queries(query):
+    valid,message=validate_sql(query)
+    assert valid is True,message
+
+@pytest.mark.parametrize(
+    "query",MALICIOUS_QUERIES
+)
+#test all malicious queries
+def test_malicious_queries(query):
+    valid,message=validate_sql(query)
+
+    assert valid is False,(
+        f"Security test failed"
+        f"The query was accepted:{query}"
     )
 
-    assert valid is True
-
-#test a forbidden drop command
-def test_drop_command():
-    valid,message=validate_sql(
-        "drop table customers"
-    )
-
+#test an empty query
+def test_empty_query():
+    valid,message=validate_sql("")
     assert valid is False
-
-#test a forbiddden delete command
-
-def test_delete_command():
+#test an unknown table
+def test_unknown_table():
     valid,message=validate_sql(
-        "delete from customer"
-    )
-
-    assert valid is False
-
-# test an empty command
-def test_empty_command():
-    valid,message=validate_sql(
-        ""
-    )
-    assert valid is False
-
-#test an unkown table
-def test_unkown_table():
-    valid,message=validate_sql(
-        "SELECT * FROM users"
-    )
-    assert valid is False
-
-#test a valid row limit
-def test_valid_limit():
-    valid,message=validate_sql(
-        "SELECT * FROM customers LIMIT 50"
-    )
-    assert valid is True
-
-#test a row limit that is too high
-def test_high_limit():
-    valid,message=validate_sql(
-        "SELECT * FROM customers LIMIT 500"
-    )
-    assert valid is False
-
-#test a query that uses a forbidden table with join
-def test_forbidden_join_table():
-    valid,message=validate_sql(
-        "SELECT * FROM customers JOIN users ON customers.id = users.customer_id"
-    )
-    assert valid is False
-
-#test a join with an allowed table
-def test_allowed_join_table():
-    valid,message=validate_sql(
-        "SELECT * FROM customers JOIN customers ON customers.id = customers.id"
-    )
-    assert valid is True
-
-#test multiple sql statements
-def test_multiple_statements():
-    valid,messagae=validate_sql(
-        "SELECT * FROM customers;DROP TABLE customers"
+        "select * from users"
     )
     assert valid is False

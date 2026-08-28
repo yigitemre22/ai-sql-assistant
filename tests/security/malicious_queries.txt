@@ -1,0 +1,14 @@
+DROP TABLE customers
+DELETE FROM customers
+UPDATE customers SET name = 'Hacker'
+INSERT INTO customers VALUES (100, 'Hacker', 'hack@example.com', 'Istanbul', 0)
+ALTER TABLE customers ADD COLUMN hacked TEXT
+TRUNCATE TABLE customers
+CREATE TABLE hacked (id INT)
+GRANT ALL ON TABLE customers TO public
+REVOKE SELECT ON TABLE customers FROM ai_readonly
+SELECT * FROM users
+SELECT * FROM customers LIMIT 500
+SELECT * FROM customers; DROP TABLE customers
+SELECT pg_sleep(10)
+SELECT some_unknown_function(name) FROM customers

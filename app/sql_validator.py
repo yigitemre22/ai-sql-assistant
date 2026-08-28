@@ -2,7 +2,12 @@
 import re
 
 #import sql parser functions
-from app.sql_parser import parse_sql,get_tables,get_statement_count
+from app.sql_parser import (
+    parse_sql,
+    get_tables,
+    get_statement_count,
+    get_functions
+    )
 
 #sql commands that our application does not allow
 FORBIDDEN_COMMANDS=[
@@ -19,6 +24,16 @@ FORBIDDEN_COMMANDS=[
 
 #tables that the ai is allowed to query
 ALLOWED_TABLES=["customers"]
+
+#functions that the application allows
+# Functions that the application allows
+ALLOWED_FUNCTIONS = {
+    "count",
+    "sum",
+    "avg",
+    "min",
+    "max"
+}
 
 #maximum number of rows that a query can return
 MAX_ROWS=100
@@ -75,6 +90,15 @@ def validate_sql(query:str)->tuple[bool,str]:
         #reject the query if the table is not allowed
         if table.lower() not in allowed_tables:
             return False,f"the table'{table} is not allowed"
+
+    #get all functions used in the sql query
+    functions=get_functions(parsed_query)
+
+    #check every function used in the query
+    for function in functions:
+        #reject functions that are not explicitly allowed
+        if function not in ALLOWED_FUNCTIONS:
+            return False,f"sql function '{function}' is not allowed"
 
     #check if the query already contains a limit clause
     limit_match=re.search(r"\bLIMIT\s+(\d+)",upper_query)

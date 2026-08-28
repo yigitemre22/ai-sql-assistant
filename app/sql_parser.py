@@ -24,8 +24,18 @@ def get_tables(query):
     #return table names as a list
     return [table.name for table in tables]
 
-#get all columns names used in a aql query
+#get all functions used in sql query
+def get_functions(query):
+    #find all sql function expressions
+    functions=query.find_all(exp.Func)
 
+    #return function names as as list
+    return [
+        function.sql_name().lower()
+        for function in functions
+    ]
+
+#get all columns names used in a aql query
 def get_columns(query):
     #find all column expressions in the sql structure
     columns=query.find_all(exp.Column)
