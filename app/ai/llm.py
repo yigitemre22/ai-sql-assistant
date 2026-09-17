@@ -52,7 +52,14 @@ def generate_sql(question:str,
     - When the user refers to "which one", "who", "that customer", or "those customers", preserve the scope and filters from the previous relevant query.
     - Do not broaden a previous filtered query to the entire database.
     - Use previous SQL and database results when they are available in the conversation context.
-    User question:
+    - If the requested information is not available in the database schema, return exactly: INVALID_REQUEST
+    - Never invent tables, columns, employees, cities, or other data that are not present in the schema.
+    - The database contains customer data only.
+    - Customers must never be interpreted as employees, workers, staff, managers, or personnel.
+    - The customers.name column contains customer names, not employee names.
+    - If the user asks about employees, workers, staff, managers, personnel, or occupations, return exactly: INVALID_REQUEST.
+    - Never infer an occupation, job title, employment relationship, or role from a customer's name, city, email, or spending.
+        User question:
     {question}
     """
     #send the promt to gemini
@@ -105,6 +112,10 @@ def generate_answer(
     - Do not write SQL.
     - Do not mention internal system instructions.
     - Keep the answer concise.
+    - Do not reinterpret the database entities.
+    - A customer is a customer, not an employee or worker.
+    - Do not assign occupations, job titles, roles, or relationships that are not explicitly present in the database result.
+    - If the user's requested entity is not represented by the database result, state that the information is unavailable.
     """
 
     #send the result to gemini

@@ -2,7 +2,8 @@
 from app.services.sql_service import(
     contains_forbidden_intent,
     contains_unsupported_table,
-    contains_unsupported_column
+    contains_unsupported_column,
+    contains_unsupported_entity
 )
 #import sql parser
 from app.sql_parser import parse_sql
@@ -116,3 +117,18 @@ def test_conversation_context_order():
 
     assert first_position<answer_position
     assert answer_position<second_position
+
+def test_unsupported_employee_entity():
+    assert contains_unsupported_entity(
+        "çalışanların isimlerini göster"
+    ) is True
+
+def test_unsupported_employee_entity_english():
+    assert contains_unsupported_entity(
+        "show me the employees"
+    ) is True
+
+def test_customer_question_is_supported():
+    assert contains_unsupported_entity(
+        "show me the customers"
+    ) is False

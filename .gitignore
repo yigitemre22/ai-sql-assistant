@@ -36,3 +36,7 @@ dist/
 # Secrets and private files
 *.pem
 *.key
+
+# Node.js
+node_modules/
+frontend/dist/

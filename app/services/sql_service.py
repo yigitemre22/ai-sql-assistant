@@ -41,6 +41,26 @@ UNSUPPORTED_TABLE_WORDS = [
     "users"
 ]
 
+# Words that refer to unsupported entity types
+UNSUPPORTED_ENTITY_WORDS = [
+    "employee",
+    "employees",
+    "worker",
+    "workers",
+    "staff",
+    "personnel",
+    "manager",
+    "managers",
+    "çalışan",
+    "çalışanlar",
+    "personel",
+    "personeller",
+    "işçi",
+    "işçiler",
+    "yönetici",
+    "yöneticiler"
+]
+
 # Columns that are available in each allowed table
 ALLOWED_COLUMNS = {
     "customers": {
@@ -66,6 +86,22 @@ def contains_forbidden_intent(question:str)->bool:
         if re.search(pattern,lower_question):
             return True
 
+    return False
+
+#check whether the question asks for an unsupported entity
+def contains_unsupported_entity(question:str)->bool:
+    #convert the question to lowercase
+    lower_question=question.lower()
+
+    #check each unsupported entity word
+    for word in UNSUPPORTED_ENTITY_WORDS:
+        #use a word boundary at the beginning.
+        #this also catches turkish suffixes such as:
+        #çalışan->çalışanlar->çalışanların
+        pattern=rf"\b{word}"
+
+        if re.search(pattern,lower_question):
+            return True
     return False
 
 # Check whether the question asks for an unsupported table
@@ -130,11 +166,45 @@ def process_question(question:str,
             "message":"only read-only select request are allowed"
         }
 
-  
+    #check whether the question asks for an unsupported entity
+    if contains_unsupported_entity(question):
+        return{
+            "success":False,
+            "question":question,
+            "sql":None,
+            "data":None,
+            "answer":(
+                "I cannot answer this question because"
+                "the database does not contain employee data"
+            ),
+            "message":(
+                "The database contains customer data,"
+                "but no employee data."
+            )
+        }
     #generate a sql query using gemini
     sql=generate_sql(question,
                      conversation_context
                      )
+
+     #handle requests that cannot be answered with the available schema
+    
+    if sql.strip().upper()=="INVALID_REQUEST":
+            return {
+                "success":False,
+                "question":question,
+                "sql":sql,
+                "data":None,
+                "answer":(
+                    "I cannot answer this question because"
+                    "the requested information is not available"
+                    "in the database."
+                ),
+                "message":(
+                    "The requested information is not available"
+                    "in the database schema"
+                )
+            }
 
     #parse the generated sql
     is_parsed,parsed_query=parse_sql(sql)
