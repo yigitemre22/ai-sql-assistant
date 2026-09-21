@@ -1,12 +1,25 @@
 #import sqlalchemy tools
-from sqlalchemy import String,Numeric,ForeignKey,DateTime
-from sqlalchemy.orm import DeclarativeBase,Mapped,mapped_column,relationship
+from sqlalchemy import (
+    String,
+    Numeric,
+    ForeignKey,
+    DateTime,
+    Integer
+    )
+
+from sqlalchemy.orm import (
+    DeclarativeBase,
+    Mapped,
+    mapped_column,
+    relationship
+    )
+
+from decimal import Decimal
 
 #import datetime tools
 from datetime import datetime,UTC
 
 #base class for all database models
-
 class Base(DeclarativeBase):
     pass
 
@@ -41,11 +54,139 @@ class Customer(Base):
         nullable=True
     )
 
+    #city id
+    city_id:Mapped[int|None]=mapped_column(
+        ForeignKey("cities.id"),
+        nullable=True
+    )
+
+    #city relationship
+    city_relation:Mapped["City"]=relationship(
+        "City",
+        back_populates="customers"
+    )
+
+    #orders
+    orders:Mapped[list["Order"]]=relationship(
+        "Order",
+        back_populates="customer"
+    )
+
     #total aomunt spent by the customer
 
-    total_spent:Mapped[float |None]=mapped_column(
-        Numeric(10,2),
+    total_spent:Mapped[Decimal |None]=mapped_column(
+        Numeric(12,2),
         nullable=True
+    )
+
+#city table model
+class City(Base):
+    __tablename__="cities"
+
+
+    id:Mapped[int]=mapped_column(
+        primary_key=True
+    )
+
+    name:Mapped[str]=mapped_column(
+        String(100),
+        nullable=False,
+        unique=True
+    )
+
+    country:Mapped[str]=mapped_column(
+        String(100),
+        nullable=False,
+        default="Türkiye"
+    )
+
+    customers:Mapped[list["Customer"]]=relationship(
+        "Customer",
+        back_populates="city_relation"
+    )
+
+#product table model
+class Product(Base):
+    __tablename__="products"
+
+    id:Mapped[int]=mapped_column(
+        primary_key=True
+    )
+
+    name:Mapped[str]=mapped_column(
+        String(100),
+        nullable=False
+    )
+    category:Mapped[str]=mapped_column(
+        String(100),
+        nullable=False
+        )
+    price:Mapped[Decimal]=mapped_column(
+        Numeric(12,2),
+        nullable=False
+    )
+    order_items:Mapped[list["OrderItem"]]=relationship(
+        "OrderItem",
+        back_populates="product"
+    )
+
+#order table model
+class Order(Base):
+    __tablename__="orders"
+
+    id:Mapped[int]=mapped_column(
+        primary_key=True
+    )
+    customer_id:Mapped[int]=mapped_column(
+        ForeignKey("customers.id"),
+        nullable=False
+    )
+    order_date:Mapped[datetime]=mapped_column(
+        DateTime(timezone=True),
+        nullable=False
+    )
+    status:Mapped[str]=mapped_column(
+        String(30),
+        nullable=False
+    )
+    customer:Mapped["Customer"]=relationship(
+        "Customer",
+        back_populates="orders"
+    )
+    order_items:Mapped[list["OrderItem"]]=relationship(
+        "OrderItem",
+        back_populates="order"
+    )
+
+#orderitem table model
+class OrderItem(Base):
+    __tablename__="order_items"
+
+    id:Mapped[int]=mapped_column(
+        primary_key=True
+    )
+    order_id:Mapped[int]=mapped_column(
+        ForeignKey("orders.id"),
+        nullable=False
+    )
+    product_id:Mapped[int]=mapped_column(
+        ForeignKey("products.id"),
+        nullable=False
+    )
+    quantity:Mapped[int]=mapped_column(
+        nullable=False
+    )
+    unit_price:Mapped[float]=mapped_column(
+        Numeric(12,2),
+        nullable=False
+    )
+    order:Mapped["Order"]=relationship(
+        "Order",
+        back_populates="order_items"
+    )
+    product:Mapped["Product"]=relationship(
+        "Product",
+        back_populates="order_items"
     )
 #conversation table model
 class Conversation(Base):

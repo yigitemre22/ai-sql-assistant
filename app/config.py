@@ -29,6 +29,9 @@ class Settings(BaseSettings):
         env_file=".env",
         env_file_encoding="utf-8"
     )
+    
+    ingest_db_user:str
+    ingest_db_password:str
 
 
 # Create the settings object
