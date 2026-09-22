@@ -1,0 +1,1001 @@
+id,name,category,price
+1,USB Cable 4606,Accessories,1924
+2,Business Laptop 1779,Computer,3757
+3,USB Cable 9774,Accessories,9035
+4,Air Fryer 1635,Home,620
+5,Monitor 9963,Computer,3911
+6,Smart TV 9028,Electronics,9295
+7,Blender 9754,Home,3711
+8,Android Phone 7024,Phone,206
+9,Android Phone 3627,Phone,4652
+10,Office Chair 1619,Office,5614
+11,Vacuum Cleaner 5735,Home,1684
+12,Gaming Mouse 7627,Gaming,4433
+13,Gaming Chair 1391,Gaming,2145
+14,Console 6025,Gaming,4903
+15,Gaming Mouse 850,Gaming,3250
+16,Phone Case 1407,Accessories,3833
+17,Office Chair 6327,Office,3914
+18,5G Phone 2764,Phone,7528
+19,Android Phone 4474,Phone,5920
+20,Mouse Pad 2903,Accessories,1269
+21,Game Controller 7673,Gaming,4110
+22,Air Purifier 3698,Home,4522
+23,USB Cable 3852,Accessories,5413
+24,Notebook 6672,Office,625
+25,Android Phone 9392,Phone,1184
+26,Laptop Stand 8279,Accessories,5255
+27,Coffee Machine 4439,Home,7617
+28,Monitor 8930,Computer,4140
+29,Flagship Phone 9660,Phone,9677
+30,Coffee Machine 2366,Home,6030
+31,Gaming Mouse 871,Gaming,8185
+32,Desk Lamp 2721,Office,1896
+33,Printer 1140,Office,7016
+34,Air Purifier 7768,Home,6352
+35,Console 288,Gaming,4219
+36,Mouse Pad 4471,Accessories,1976
+37,Office Chair 4908,Office,5673
+38,Blender 153,Home,2691
+39,Mouse Pad 3027,Accessories,4415
+40,Gaming Headset 8417,Gaming,1843
+41,Game Controller 6226,Gaming,3358
+42,Printer 8789,Office,2746
+43,Bluetooth Headset 8105,Electronics,9913
+44,Bluetooth Headset 5138,Electronics,1932
+45,Business Laptop 9395,Computer,1049
+46,Power Bank 1233,Electronics,1503
+47,Desk Lamp 2203,Office,8827
+48,Mouse Pad 2805,Accessories,7887
+49,Budget Phone 7032,Phone,8745
+50,Business Laptop 5207,Computer,8935
+51,Blender 8579,Home,6218
+52,Coffee Machine 3781,Home,2082
+53,Wireless Speaker 9738,Electronics,5639
+54,Console 3708,Gaming,3870
+55,Wireless Speaker 3850,Electronics,1263
+56,Bluetooth Headset 1260,Electronics,614
+57,Gaming Headset 8053,Gaming,3999
+58,Business Laptop 9455,Computer,8934
+59,Game Controller 7849,Gaming,7844
+60,Desk Lamp 1645,Office,6769
+61,Bluetooth Headset 7039,Electronics,7162
+62,Air Fryer 1712,Home,7751
+63,Bluetooth Headset 1890,Electronics,6696
+64,Business Laptop 8886,Computer,3239
+65,Blender 3106,Home,2396
+66,Android Phone 1335,Phone,7679
+67,Air Fryer 928,Home,9116
+68,USB Cable 1628,Accessories,8956
+69,Desk Lamp 6758,Office,3972
+70,Coffee Machine 6670,Home,7986
+71,Power Bank 135,Electronics,2797
+72,Blender 4773,Home,4445
+73,Blender 2636,Home,9205
+74,Business Laptop 1058,Computer,4961
+75,Gaming Mouse 5238,Gaming,8983
+76,Smart Watch 7911,Electronics,921
+77,Game Controller 1031,Gaming,8801
+78,Game Controller 1222,Gaming,1412
+79,Game Controller 6715,Gaming,1213
+80,Smart TV 9585,Electronics,9433
+81,Console 1443,Gaming,751
+82,Air Purifier 8665,Home,9662
+83,Android Phone 5247,Phone,4372
+84,Desktop PC 2244,Computer,4451
+85,HDMI Cable 5280,Accessories,5015
+86,Office Chair 7608,Office,1288
+87,Gaming Mouse 1300,Gaming,9324
+88,Console 4445,Gaming,3592
+89,Gaming Laptop 4102,Computer,5818
+90,Android Phone 7279,Phone,4769
+91,Notebook 8766,Office,9000
+92,Bluetooth Headset 1797,Electronics,9186
+93,Gaming Laptop 1853,Computer,4433
+94,Laptop Stand 4562,Accessories,9164
+95,5G Phone 3435,Phone,3550
+96,Mouse Pad 8104,Accessories,4425
+97,Smartphone 7039,Phone,932
+98,Office Chair 158,Office,4633
+99,5G Phone 2747,Phone,2243
+100,Mouse Pad 7107,Accessories,7339
+101,Gaming Mouse 1332,Gaming,258
+102,Mouse Pad 690,Accessories,2542
+103,Printer 9152,Office,6149
+104,Business Laptop 785,Computer,7141
+105,Smartphone 5962,Phone,6074
+106,Gaming Laptop 5894,Computer,4188
+107,Desk Organizer 2632,Office,9273
+108,Business Laptop 6855,Computer,2762
+109,Bluetooth Headset 6845,Electronics,3038
+110,Notebook 2708,Office,4165
+111,Desk Organizer 734,Office,1871
+112,Desk Lamp 3369,Office,7811
+113,Notebook 5100,Office,7641
+114,Desk Lamp 487,Office,3828
+115,HDMI Cable 5478,Accessories,3264
+116,5G Phone 5853,Phone,1237
+117,HDMI Cable 8885,Accessories,8446
+118,Smartphone 4379,Phone,552
+119,Mechanical Keyboard 726,Computer,9612
+120,Power Bank 5763,Electronics,9874
+121,HDMI Cable 8479,Accessories,5239
+122,Smart Watch 3214,Electronics,6411
+123,Flagship Phone 127,Phone,827
+124,Game Controller 6067,Gaming,8921
+125,Vacuum Cleaner 5243,Home,1246
+126,Phone Case 8408,Accessories,2141
+127,5G Phone 6692,Phone,6791
+128,Mouse Pad 2185,Accessories,4944
+129,Desktop PC 2951,Computer,6988
+130,Gaming Headset 6753,Gaming,9424
+131,Gaming Headset 4800,Gaming,106
+132,Monitor 5379,Computer,7143
+133,Blender 3601,Home,7338
+134,Game Controller 1489,Gaming,7852
+135,Budget Phone 5591,Phone,8545
+136,Bluetooth Headset 3780,Electronics,3948
+137,Desk Lamp 500,Office,3362
+138,Power Bank 1293,Electronics,4111
+139,Air Purifier 3285,Home,6890
+140,HDMI Cable 6647,Accessories,6391
+141,Gaming Laptop 1846,Computer,2517
+142,Desk Lamp 2981,Office,7065
+143,Desk Organizer 922,Office,8586
+144,Gaming Mouse 7578,Gaming,4182
+145,Monitor 9257,Computer,7712
+146,Gaming Chair 8370,Gaming,5298
+147,Blender 2707,Home,9076
+148,HDMI Cable 4346,Accessories,7877
+149,Notebook 8640,Office,4150
+150,Vacuum Cleaner 7306,Home,4019
+151,Smart TV 4551,Electronics,4781
+152,Budget Phone 1420,Phone,5338
+153,Business Laptop 6375,Computer,2571
+154,Laptop Stand 1152,Accessories,2603
+155,Vacuum Cleaner 8990,Home,6778
+156,Air Fryer 3488,Home,6912
+157,Desk Organizer 9669,Office,6983
+158,Mouse Pad 6332,Accessories,420
+159,Vacuum Cleaner 4992,Home,196
+160,Desk Organizer 8918,Office,6489
+161,Mouse Pad 3713,Accessories,9047
+162,Vacuum Cleaner 7240,Home,3695
+163,Blender 5607,Home,575
+164,Laptop Stand 7757,Accessories,6724
+165,Gaming Laptop 6555,Computer,8851
+166,Gaming Mouse 1475,Gaming,9346
+167,Laptop Stand 7664,Accessories,7122
+168,Mechanical Keyboard 6311,Computer,923
+169,Flagship Phone 5455,Phone,3567
+170,5G Phone 7006,Phone,6311
+171,Flagship Phone 417,Phone,1441
+172,USB Cable 5833,Accessories,8937
+173,Gaming Laptop 608,Computer,1224
+174,Gaming Laptop 2596,Computer,3366
+175,Desktop PC 1974,Computer,2168
+176,Gaming Chair 4298,Gaming,3671
+177,Desk Lamp 1976,Office,6143
+178,Notebook 1871,Office,2783
+179,Gaming Headset 9533,Gaming,520
+180,HDMI Cable 3349,Accessories,6249
+181,Smart TV 1769,Electronics,9800
+182,Mouse Pad 2083,Accessories,5041
+183,Office Chair 5788,Office,9372
+184,Gaming Headset 1229,Gaming,7118
+185,Gaming Mouse 6982,Gaming,5690
+186,Office Chair 7202,Office,8131
+187,Android Phone 7235,Phone,7632
+188,Mechanical Keyboard 8917,Computer,8648
+189,Desk Organizer 7236,Office,8021
+190,Notebook 5380,Office,9807
+191,Office Chair 4669,Office,4122
+192,Blender 9436,Home,4095
+193,Gaming Headset 570,Gaming,6309
+194,Coffee Machine 8088,Home,5425
+195,Mechanical Keyboard 5676,Computer,5913
+196,5G Phone 9206,Phone,9867
+197,Smart TV 1502,Electronics,8564
+198,Desktop PC 9196,Computer,6758
+199,Desk Organizer 8141,Office,4037
+200,Air Fryer 4920,Home,382
+201,Business Laptop 5116,Computer,6725
+202,Phone Case 7853,Accessories,9628
+203,Gaming Headset 7071,Gaming,8798
+204,Phone Case 5864,Accessories,9117
+205,Phone Case 5123,Accessories,7534
+206,Smartphone 3255,Phone,3877
+207,Budget Phone 3133,Phone,2058
+208,Desktop PC 4630,Computer,3645
+209,Mouse Pad 9877,Accessories,9759
+210,Android Phone 4953,Phone,1747
+211,Business Laptop 5052,Computer,6012
+212,Smart TV 4594,Electronics,8851
+213,Smart Watch 4886,Electronics,993
+214,HDMI Cable 1780,Accessories,2168
+215,Printer 4758,Office,300
+216,Blender 5682,Home,7943
+217,Mechanical Keyboard 7927,Computer,941
+218,Power Bank 8156,Electronics,1170
+219,Wireless Speaker 2585,Electronics,9553
+220,Mechanical Keyboard 1495,Computer,9321
+221,Monitor 6918,Computer,2040
+222,Console 3797,Gaming,9866
+223,Desk Organizer 7481,Office,8661
+224,Air Purifier 7125,Home,4971
+225,Budget Phone 1086,Phone,9416
+226,Game Controller 3557,Gaming,1725
+227,Android Phone 4029,Phone,1430
+228,Gaming Laptop 2664,Computer,9143
+229,Power Bank 9829,Electronics,6793
+230,Air Fryer 3892,Home,4871
+231,Flagship Phone 1266,Phone,4732
+232,Phone Case 9763,Accessories,3924
+233,HDMI Cable 1980,Accessories,3341
+234,Game Controller 4452,Gaming,3783
+235,Office Chair 1077,Office,2430
+236,Monitor 9425,Computer,5139
+237,Smartphone 7779,Phone,7295
+238,HDMI Cable 4560,Accessories,5082
+239,Gaming Chair 7272,Gaming,8947
+240,Wireless Speaker 7178,Electronics,9898
+241,Mouse Pad 4202,Accessories,5380
+242,Smart TV 9524,Electronics,1596
+243,Gaming Headset 9541,Gaming,439
+244,Power Bank 8602,Electronics,2970
+245,Phone Case 3073,Accessories,7345
+246,Gaming Chair 1594,Gaming,7241
+247,Blender 5560,Home,5800
+248,Android Phone 5503,Phone,1813
+249,Vacuum Cleaner 6661,Home,8217
+250,Office Chair 7551,Office,9112
+251,Bluetooth Headset 5396,Electronics,5253
+252,Smart Watch 118,Electronics,6722
+253,HDMI Cable 6870,Accessories,8989
+254,Smart Watch 6027,Electronics,3173
+255,Gaming Chair 945,Gaming,8267
+256,Monitor 2246,Computer,4475
+257,Flagship Phone 2089,Phone,7278
+258,Smart TV 5191,Electronics,4020
+259,Console 6784,Gaming,324
+260,Wireless Speaker 7660,Electronics,3781
+261,Power Bank 4881,Electronics,2622
+262,Gaming Chair 8005,Gaming,4579
+263,Blender 9131,Home,4093
+264,Business Laptop 9920,Computer,6384
+265,Gaming Mouse 4626,Gaming,2336
+266,Notebook 8418,Office,6898
+267,5G Phone 4991,Phone,142
+268,Printer 8122,Office,9716
+269,Desk Organizer 8924,Office,2534
+270,Vacuum Cleaner 9142,Home,5754
+271,Desk Organizer 7560,Office,9003
+272,Android Phone 9468,Phone,3190
+273,Blender 815,Home,3926
+274,Flagship Phone 6425,Phone,7849
+275,HDMI Cable 706,Accessories,2592
+276,Monitor 5539,Computer,8329
+277,Desk Organizer 1733,Office,1744
+278,Gaming Mouse 2461,Gaming,7586
+279,Air Fryer 7792,Home,2629
+280,Notebook 6612,Office,4442
+281,Phone Case 8842,Accessories,1415
+282,Blender 8964,Home,5288
+283,Smart TV 4808,Electronics,1221
+284,Desktop PC 1712,Computer,1580
+285,Desk Organizer 2825,Office,1746
+286,USB Cable 853,Accessories,5006
+287,5G Phone 5973,Phone,1019
+288,Android Phone 4100,Phone,7156
+289,Console 3050,Gaming,6851
+290,Gaming Laptop 6367,Computer,2968
+291,Gaming Chair 9654,Gaming,4045
+292,Desktop PC 4261,Computer,3904
+293,Air Fryer 7722,Home,4283
+294,Android Phone 1310,Phone,9055
+295,Air Purifier 5001,Home,5761
+296,Phone Case 7584,Accessories,7051
+297,Desk Lamp 6402,Office,5049
+298,Office Chair 3986,Office,8016
+299,Vacuum Cleaner 9517,Home,9470
+300,Smartphone 6584,Phone,4937
+301,Budget Phone 903,Phone,232
+302,Gaming Headset 3870,Gaming,8238
+303,Game Controller 3215,Gaming,5872
+304,Game Controller 1691,Gaming,4206
+305,Phone Case 7322,Accessories,745
+306,Bluetooth Headset 2253,Electronics,9595
+307,Bluetooth Headset 6907,Electronics,4935
+308,Business Laptop 8937,Computer,3389
+309,Budget Phone 4565,Phone,8797
+310,Notebook 7994,Office,2795
+311,Notebook 1986,Office,4935
+312,Coffee Machine 3796,Home,1333
+313,Printer 6092,Office,6611
+314,Wireless Speaker 4432,Electronics,6564
+315,Gaming Chair 6138,Gaming,2124
+316,Mouse Pad 6342,Accessories,4395
+317,Office Chair 3930,Office,6186
+318,Air Purifier 9298,Home,510
+319,Smartphone 7706,Phone,3726
+320,HDMI Cable 2011,Accessories,5051
+321,Gaming Laptop 5086,Computer,842
+322,Air Fryer 3946,Home,2002
+323,Gaming Chair 7532,Gaming,2322
+324,Flagship Phone 9722,Phone,8950
+325,HDMI Cable 1722,Accessories,2631
+326,Printer 6786,Office,8117
+327,5G Phone 3659,Phone,636
+328,Coffee Machine 6042,Home,7385
+329,Smart Watch 5976,Electronics,6118
+330,Bluetooth Headset 3209,Electronics,6623
+331,Wireless Speaker 3575,Electronics,7550
+332,USB Cable 928,Accessories,9883
+333,Desk Lamp 2163,Office,5564
+334,Desk Lamp 1224,Office,9350
+335,Desk Lamp 9707,Office,9180
+336,Mechanical Keyboard 2517,Computer,3917
+337,Office Chair 4642,Office,9864
+338,Desk Lamp 8950,Office,2470
+339,Smartphone 522,Phone,2958
+340,Mechanical Keyboard 3998,Computer,343
+341,Gaming Mouse 2954,Gaming,5404
+342,Android Phone 6997,Phone,958
+343,Gaming Mouse 7902,Gaming,1962
+344,Air Purifier 9826,Home,6031
+345,Smart Watch 3729,Electronics,7505
+346,Console 5041,Gaming,810
+347,Air Fryer 7947,Home,610
+348,Desk Organizer 1868,Office,6680
+349,Air Fryer 1423,Home,7367
+350,Smartphone 2167,Phone,2530
+351,Budget Phone 5427,Phone,9690
+352,Air Purifier 4931,Home,9887
+353,Air Purifier 7148,Home,8382
+354,Smart Watch 3622,Electronics,1974
+355,Coffee Machine 6879,Home,7498
+356,Flagship Phone 6915,Phone,7530
+357,Phone Case 7092,Accessories,1657
+358,5G Phone 2600,Phone,4276
+359,USB Cable 1594,Accessories,7870
+360,Office Chair 7175,Office,1498
+361,Smart TV 9215,Electronics,6205
+362,Smart Watch 9302,Electronics,9708
+363,Flagship Phone 5893,Phone,2102
+364,Office Chair 4812,Office,7029
+365,Gaming Headset 1797,Gaming,5219
+366,Game Controller 2635,Gaming,8413
+367,Laptop Stand 1873,Accessories,8000
+368,5G Phone 1982,Phone,9213
+369,Printer 3805,Office,4664
+370,Printer 9221,Office,7130
+371,Wireless Speaker 3055,Electronics,4481
+372,5G Phone 5851,Phone,5162
+373,Smart TV 9378,Electronics,3072
+374,USB Cable 2424,Accessories,6666
+375,USB Cable 8791,Accessories,602
+376,Desktop PC 7532,Computer,6263
+377,5G Phone 5205,Phone,2678
+378,Mouse Pad 9868,Accessories,5414
+379,Smart TV 2679,Electronics,961
+380,Office Chair 4558,Office,915
+381,Blender 7342,Home,7047
+382,Coffee Machine 8494,Home,4575
+383,Power Bank 1916,Electronics,5755
+384,Flagship Phone 8733,Phone,9817
+385,USB Cable 3712,Accessories,5153
+386,Air Fryer 225,Home,9919
+387,Business Laptop 2348,Computer,5038
+388,Notebook 5475,Office,4286
+389,Power Bank 7155,Electronics,226
+390,Desktop PC 8825,Computer,2216
+391,Mouse Pad 9254,Accessories,3870
+392,Office Chair 6605,Office,5902
+393,Desk Organizer 407,Office,793
+394,Vacuum Cleaner 9533,Home,1375
+395,Blender 6943,Home,9494
+396,Flagship Phone 441,Phone,1987
+397,Budget Phone 7638,Phone,2915
+398,Office Chair 7255,Office,6028
+399,Desk Lamp 7238,Office,1834
+400,Console 1388,Gaming,6660
+401,Vacuum Cleaner 3730,Home,5183
+402,Smartphone 8463,Phone,2854
+403,Mouse Pad 8455,Accessories,1968
+404,Mechanical Keyboard 2519,Computer,5824
+405,Business Laptop 4293,Computer,1784
+406,Monitor 2604,Computer,2942
+407,Desk Lamp 8195,Office,1334
+408,Air Purifier 7454,Home,9336
+409,Mouse Pad 5395,Accessories,9348
+410,Desk Lamp 7305,Office,5279
+411,Power Bank 5061,Electronics,7782
+412,Printer 1020,Office,4600
+413,Smartphone 5185,Phone,8412
+414,Air Fryer 1032,Home,7504
+415,Smartphone 1579,Phone,4803
+416,Console 6399,Gaming,9833
+417,Air Purifier 772,Home,9608
+418,Coffee Machine 5367,Home,9466
+419,Console 2571,Gaming,7892
+420,Wireless Speaker 5726,Electronics,7481
+421,Mouse Pad 2927,Accessories,1481
+422,Power Bank 7299,Electronics,4159
+423,Console 2700,Gaming,8664
+424,5G Phone 6447,Phone,6208
+425,Air Purifier 957,Home,5643
+426,Office Chair 5501,Office,5582
+427,Power Bank 4755,Electronics,9241
+428,Android Phone 5561,Phone,9974
+429,Smart TV 5831,Electronics,9647
+430,Android Phone 9849,Phone,6521
+431,Phone Case 9257,Accessories,1488
+432,Coffee Machine 8724,Home,5481
+433,Smart Watch 6028,Electronics,7037
+434,Bluetooth Headset 3053,Electronics,6040
+435,Desktop PC 3245,Computer,5698
+436,Business Laptop 1364,Computer,2353
+437,Budget Phone 8943,Phone,1757
+438,Office Chair 5617,Office,8726
+439,Printer 6272,Office,2247
+440,Business Laptop 2812,Computer,2758
+441,USB Cable 6831,Accessories,7270
+442,Flagship Phone 4768,Phone,3991
+443,Desk Lamp 8849,Office,7455
+444,Desktop PC 3278,Computer,5170
+445,Flagship Phone 7664,Phone,9445
+446,Desk Organizer 8339,Office,4716
+447,Game Controller 3371,Gaming,6959
+448,Notebook 954,Office,2367
+449,Phone Case 9185,Accessories,7973
+450,Wireless Speaker 4770,Electronics,8552
+451,Bluetooth Headset 7461,Electronics,2726
+452,Gaming Chair 1602,Gaming,2514
+453,Mechanical Keyboard 536,Computer,7491
+454,Blender 8324,Home,972
+455,Flagship Phone 1437,Phone,3962
+456,Smartphone 5321,Phone,3778
+457,Smart TV 2354,Electronics,5593
+458,Power Bank 2373,Electronics,4800
+459,Desk Organizer 186,Office,7785
+460,Bluetooth Headset 3633,Electronics,411
+461,Printer 8747,Office,2549
+462,Vacuum Cleaner 3993,Home,1921
+463,Smartphone 4006,Phone,2096
+464,Air Fryer 1916,Home,7589
+465,Printer 8882,Office,8289
+466,Smart Watch 4063,Electronics,8543
+467,Phone Case 7132,Accessories,2452
+468,Smart TV 9449,Electronics,5880
+469,Air Fryer 8676,Home,3168
+470,Budget Phone 9014,Phone,1208
+471,Console 433,Gaming,8416
+472,Air Fryer 6438,Home,7802
+473,Smartphone 5950,Phone,4255
+474,Notebook 4050,Office,1206
+475,Mouse Pad 5547,Accessories,1798
+476,Mechanical Keyboard 9045,Computer,826
+477,Flagship Phone 7940,Phone,2968
+478,Laptop Stand 1133,Accessories,3086
+479,USB Cable 4907,Accessories,7598
+480,Business Laptop 786,Computer,817
+481,Budget Phone 6624,Phone,5180
+482,Desk Organizer 4250,Office,8997
+483,Bluetooth Headset 5948,Electronics,3231
+484,Notebook 4576,Office,883
+485,Power Bank 6653,Electronics,6129
+486,HDMI Cable 5654,Accessories,7304
+487,Desktop PC 6118,Computer,8229
+488,Notebook 1453,Office,8607
+489,USB Cable 7155,Accessories,7055
+490,Console 4913,Gaming,3056
+491,Smartphone 5472,Phone,1780
+492,Phone Case 7405,Accessories,4943
+493,Game Controller 7372,Gaming,7081
+494,Smartphone 5876,Phone,7425
+495,Gaming Headset 1039,Gaming,7226
+496,Bluetooth Headset 8506,Electronics,6755
+497,Office Chair 2439,Office,2721
+498,Office Chair 2168,Office,7279
+499,Bluetooth Headset 6033,Electronics,3966
+500,Air Fryer 2613,Home,9393
+501,Phone Case 6195,Accessories,7471
+502,Air Purifier 2355,Home,1359
+503,Gaming Chair 5250,Gaming,6112
+504,Laptop Stand 1958,Accessories,4666
+505,Power Bank 8582,Electronics,3148
+506,Air Fryer 4388,Home,9302
+507,Desk Organizer 3615,Office,4364
+508,Gaming Chair 3379,Gaming,4778
+509,Wireless Speaker 7506,Electronics,2323
+510,Gaming Laptop 5336,Computer,7392
+511,USB Cable 9111,Accessories,5792
+512,Gaming Headset 2680,Gaming,4857
+513,Phone Case 8435,Accessories,2952
+514,Business Laptop 2375,Computer,2088
+515,Gaming Laptop 6012,Computer,8194
+516,Gaming Headset 7757,Gaming,9476
+517,Desk Lamp 1512,Office,9138
+518,Power Bank 7942,Electronics,5167
+519,Gaming Chair 9519,Gaming,6830
+520,Bluetooth Headset 1315,Electronics,2153
+521,Air Purifier 5744,Home,7732
+522,Monitor 3081,Computer,9132
+523,Desk Organizer 8338,Office,2214
+524,Office Chair 8588,Office,1007
+525,Business Laptop 2753,Computer,5082
+526,5G Phone 8601,Phone,3794
+527,5G Phone 3316,Phone,1392
+528,Phone Case 2150,Accessories,9124
+529,Mouse Pad 8840,Accessories,5061
+530,Smart TV 9796,Electronics,8334
+531,Game Controller 5631,Gaming,2626
+532,Office Chair 564,Office,9334
+533,Smart Watch 4436,Electronics,844
+534,Mouse Pad 6925,Accessories,3553
+535,Gaming Chair 9038,Gaming,596
+536,Flagship Phone 4112,Phone,5049
+537,Notebook 7530,Office,6753
+538,Smart TV 7302,Electronics,1081
+539,Blender 3442,Home,8033
+540,5G Phone 5331,Phone,2453
+541,HDMI Cable 2242,Accessories,5758
+542,Printer 9302,Office,6170
+543,Smart TV 7742,Electronics,5328
+544,Power Bank 4161,Electronics,4482
+545,Gaming Laptop 4854,Computer,1686
+546,Coffee Machine 2716,Home,6950
+547,Printer 5223,Office,5464
+548,Desktop PC 8533,Computer,2710
+549,Vacuum Cleaner 8248,Home,8271
+550,Power Bank 8381,Electronics,1575
+551,Coffee Machine 9657,Home,4044
+552,Smartphone 4709,Phone,897
+553,Blender 4781,Home,9889
+554,Gaming Mouse 7160,Gaming,233
+555,Mechanical Keyboard 6706,Computer,4433
+556,Flagship Phone 938,Phone,841
+557,Game Controller 6039,Gaming,9304
+558,Gaming Mouse 6429,Gaming,4828
+559,Console 4682,Gaming,7478
+560,Desk Lamp 1684,Office,2046
+561,Vacuum Cleaner 9239,Home,6214
+562,Android Phone 9970,Phone,2463
+563,Console 759,Gaming,6676
+564,Smart TV 5556,Electronics,737
+565,Printer 7587,Office,7861
+566,Business Laptop 5473,Computer,8546
+567,Game Controller 6538,Gaming,5318
+568,Console 5611,Gaming,5002
+569,Console 8125,Gaming,8451
+570,Phone Case 7880,Accessories,9322
+571,Notebook 5527,Office,372
+572,HDMI Cable 9663,Accessories,1895
+573,Budget Phone 7875,Phone,536
+574,Budget Phone 3828,Phone,9577
+575,Mouse Pad 7971,Accessories,941
+576,Monitor 6329,Computer,8689
+577,Gaming Laptop 9480,Computer,4068
+578,Laptop Stand 410,Accessories,1900
+579,Blender 2581,Home,5239
+580,Blender 8321,Home,3440
+581,Office Chair 2362,Office,7826
+582,Console 5425,Gaming,3497
+583,Mouse Pad 6273,Accessories,7937
+584,Flagship Phone 8834,Phone,2937
+585,5G Phone 4431,Phone,9050
+586,Game Controller 4138,Gaming,8032
+587,5G Phone 3784,Phone,9243
+588,Android Phone 8111,Phone,4835
+589,5G Phone 9283,Phone,7961
+590,Notebook 2096,Office,4580
+591,Gaming Chair 6564,Gaming,8999
+592,Desk Lamp 4858,Office,5754
+593,Wireless Speaker 5774,Electronics,4812
+594,Blender 3605,Home,4301
+595,Mechanical Keyboard 9308,Computer,8924
+596,Laptop Stand 1889,Accessories,4550
+597,Game Controller 4072,Gaming,9714
+598,Smart TV 3914,Electronics,8800
+599,Power Bank 5511,Electronics,1741
+600,USB Cable 2352,Accessories,7839
+601,Smart TV 6766,Electronics,9116
+602,HDMI Cable 3367,Accessories,7893
+603,Notebook 4776,Office,4806
+604,USB Cable 9506,Accessories,1069
+605,Gaming Laptop 2968,Computer,8867
+606,Air Fryer 6604,Home,2980
+607,Desk Lamp 4842,Office,8216
+608,Bluetooth Headset 9405,Electronics,251
+609,Gaming Headset 4762,Gaming,1858
+610,Air Purifier 8192,Home,9001
+611,Desktop PC 4570,Computer,8361
+612,Mechanical Keyboard 2762,Computer,1945
+613,Phone Case 3150,Accessories,7618
+614,Bluetooth Headset 9402,Electronics,5623
+615,Laptop Stand 6743,Accessories,3264
+616,Printer 5472,Office,7107
+617,Wireless Speaker 3127,Electronics,6667
+618,Mechanical Keyboard 4164,Computer,7922
+619,Power Bank 3958,Electronics,4372
+620,Vacuum Cleaner 5047,Home,4474
+621,Gaming Mouse 4385,Gaming,9486
+622,Laptop Stand 1117,Accessories,5990
+623,HDMI Cable 5126,Accessories,2036
+624,Monitor 5195,Computer,6742
+625,Phone Case 6121,Accessories,2023
+626,Game Controller 2288,Gaming,3718
+627,Blender 6221,Home,2609
+628,Blender 8906,Home,9098
+629,Desk Lamp 9861,Office,3678
+630,Printer 7419,Office,1441
+631,Gaming Mouse 9343,Gaming,6027
+632,Smart Watch 8381,Electronics,1111
+633,Monitor 2555,Computer,9483
+634,Monitor 7339,Computer,5475
+635,Smart Watch 8108,Electronics,3465
+636,Power Bank 1011,Electronics,8461
+637,Air Purifier 6906,Home,2261
+638,Air Fryer 9255,Home,9339
+639,Air Fryer 6587,Home,5149
+640,Android Phone 9575,Phone,149
+641,Power Bank 5744,Electronics,842
+642,Mouse Pad 1087,Accessories,1144
+643,Wireless Speaker 4803,Electronics,7834
+644,Coffee Machine 6987,Home,3048
+645,Flagship Phone 6284,Phone,6366
+646,Air Purifier 2278,Home,1414
+647,USB Cable 3024,Accessories,5797
+648,Console 2186,Gaming,6539
+649,USB Cable 472,Accessories,3748
+650,Budget Phone 7048,Phone,7685
+651,Game Controller 4155,Gaming,6314
+652,Coffee Machine 4616,Home,5771
+653,Gaming Laptop 6968,Computer,1948
+654,Game Controller 3476,Gaming,356
+655,Smart Watch 650,Electronics,1753
+656,Air Fryer 4109,Home,9894
+657,HDMI Cable 7291,Accessories,824
+658,Business Laptop 1024,Computer,8943
+659,Mechanical Keyboard 3936,Computer,8355
+660,Notebook 9561,Office,9538
+661,Game Controller 5044,Gaming,5353
+662,Business Laptop 6875,Computer,8640
+663,Smartphone 9221,Phone,4608
+664,Gaming Chair 9207,Gaming,2969
+665,Vacuum Cleaner 6344,Home,868
+666,Notebook 6921,Office,8692
+667,Vacuum Cleaner 6267,Home,2544
+668,Desktop PC 4048,Computer,8913
+669,Notebook 2465,Office,3792
+670,Office Chair 9314,Office,7686
+671,Air Purifier 8783,Home,6924
+672,Business Laptop 4277,Computer,6463
+673,Gaming Laptop 7469,Computer,5511
+674,Office Chair 8875,Office,6179
+675,USB Cable 4498,Accessories,3220
+676,Air Fryer 1292,Home,9978
+677,Monitor 3655,Computer,9726
+678,Vacuum Cleaner 5067,Home,3522
+679,Smart TV 2022,Electronics,3570
+680,Laptop Stand 3450,Accessories,7946
+681,Air Purifier 5369,Home,4021
+682,Desk Organizer 7739,Office,4737
+683,Gaming Headset 4385,Gaming,5986
+684,Flagship Phone 7735,Phone,8501
+685,Bluetooth Headset 3428,Electronics,7792
+686,Flagship Phone 849,Phone,5226
+687,Game Controller 365,Gaming,3725
+688,Budget Phone 9588,Phone,9165
+689,Phone Case 2597,Accessories,6941
+690,Business Laptop 6323,Computer,5504
+691,Gaming Chair 9121,Gaming,4126
+692,Phone Case 8105,Accessories,5630
+693,HDMI Cable 2856,Accessories,8137
+694,Laptop Stand 2393,Accessories,5870
+695,HDMI Cable 3115,Accessories,9054
+696,Console 654,Gaming,1062
+697,Office Chair 204,Office,1317
+698,Coffee Machine 1213,Home,2352
+699,USB Cable 3683,Accessories,2574
+700,Gaming Headset 1090,Gaming,7571
+701,Gaming Chair 357,Gaming,8016
+702,Smart Watch 6839,Electronics,8819
+703,Smart Watch 4601,Electronics,374
+704,Gaming Mouse 8328,Gaming,4797
+705,Desk Lamp 1853,Office,7154
+706,Smart TV 4048,Electronics,8691
+707,Mechanical Keyboard 5907,Computer,8725
+708,Smartphone 6212,Phone,6602
+709,Air Purifier 4084,Home,7620
+710,Phone Case 1420,Accessories,3800
+711,USB Cable 6740,Accessories,619
+712,Air Purifier 7898,Home,6279
+713,Smart TV 1454,Electronics,254
+714,Vacuum Cleaner 9370,Home,7209
+715,Printer 797,Office,1662
+716,Monitor 7890,Computer,3563
+717,Smartphone 4693,Phone,862
+718,Gaming Mouse 3038,Gaming,9332
+719,Office Chair 3494,Office,5252
+720,Gaming Chair 1360,Gaming,2462
+721,Budget Phone 4039,Phone,2761
+722,Console 5535,Gaming,6475
+723,Air Fryer 8304,Home,2392
+724,USB Cable 1700,Accessories,5766
+725,Air Fryer 5680,Home,3903
+726,Gaming Chair 5447,Gaming,9858
+727,Power Bank 8138,Electronics,4578
+728,Monitor 6250,Computer,5929
+729,Air Purifier 6327,Home,3143
+730,Smart TV 1304,Electronics,4939
+731,Smart TV 6325,Electronics,4490
+732,HDMI Cable 5288,Accessories,2627
+733,Smartphone 185,Phone,1845
+734,5G Phone 4519,Phone,7386
+735,Wireless Speaker 3170,Electronics,2270
+736,Air Purifier 9188,Home,7453
+737,Gaming Mouse 530,Gaming,6785
+738,Smart Watch 1624,Electronics,5898
+739,Gaming Headset 6411,Gaming,9898
+740,Power Bank 6453,Electronics,4881
+741,Printer 4077,Office,1487
+742,Game Controller 6337,Gaming,8637
+743,Mechanical Keyboard 5033,Computer,2374
+744,Android Phone 1136,Phone,8179
+745,Mechanical Keyboard 6999,Computer,7221
+746,Smartphone 6016,Phone,8033
+747,Flagship Phone 9828,Phone,4140
+748,Gaming Chair 1852,Gaming,3303
+749,Gaming Laptop 6583,Computer,5091
+750,5G Phone 7312,Phone,6324
+751,Budget Phone 2330,Phone,7155
+752,Budget Phone 3390,Phone,5353
+753,Coffee Machine 6624,Home,5247
+754,Flagship Phone 9535,Phone,4875
+755,Notebook 6261,Office,4071
+756,5G Phone 1965,Phone,6537
+757,Console 9039,Gaming,3373
+758,Gaming Laptop 7663,Computer,9112
+759,HDMI Cable 4873,Accessories,3534
+760,Desk Organizer 8280,Office,1233
+761,Business Laptop 4239,Computer,5061
+762,HDMI Cable 6276,Accessories,2625
+763,Smart Watch 7951,Electronics,7457
+764,Console 8400,Gaming,6666
+765,Printer 702,Office,6953
+766,Printer 9829,Office,5990
+767,USB Cable 4167,Accessories,1492
+768,Laptop Stand 825,Accessories,5916
+769,Gaming Headset 7152,Gaming,6647
+770,Wireless Speaker 4339,Electronics,272
+771,Monitor 9242,Computer,8466
+772,Game Controller 7403,Gaming,9524
+773,Flagship Phone 9743,Phone,6508
+774,Laptop Stand 5751,Accessories,8299
+775,Wireless Speaker 4940,Electronics,8009
+776,Air Fryer 2421,Home,1506
+777,5G Phone 7560,Phone,5210
+778,Printer 8012,Office,3489
+779,Smartphone 7278,Phone,7901
+780,Phone Case 1200,Accessories,7512
+781,Smartphone 470,Phone,832
+782,Office Chair 2792,Office,5720
+783,Mouse Pad 2958,Accessories,4096
+784,Gaming Headset 9272,Gaming,2723
+785,Coffee Machine 6736,Home,7670
+786,Laptop Stand 7180,Accessories,3122
+787,Air Purifier 3332,Home,578
+788,Blender 6470,Home,9802
+789,Smart TV 4660,Electronics,3619
+790,Printer 1767,Office,1125
+791,Desk Lamp 6093,Office,8896
+792,Flagship Phone 1967,Phone,3328
+793,Budget Phone 5234,Phone,8119
+794,Console 6531,Gaming,6467
+795,Gaming Headset 5866,Gaming,1971
+796,Printer 2926,Office,7601
+797,Printer 9769,Office,4973
+798,Bluetooth Headset 2031,Electronics,2294
+799,Gaming Laptop 3099,Computer,5103
+800,Budget Phone 6464,Phone,2416
+801,Coffee Machine 9517,Home,9871
+802,Coffee Machine 8073,Home,7031
+803,Laptop Stand 9191,Accessories,8904
+804,Mechanical Keyboard 2398,Computer,8122
+805,Desktop PC 978,Computer,5254
+806,Office Chair 8039,Office,5982
+807,Desktop PC 9300,Computer,3296
+808,Gaming Chair 8156,Gaming,8209
+809,Blender 2840,Home,7372
+810,Wireless Speaker 3713,Electronics,9363
+811,5G Phone 3783,Phone,635
+812,Game Controller 7592,Gaming,4829
+813,Console 8469,Gaming,8215
+814,Wireless Speaker 4489,Electronics,9483
+815,Notebook 8980,Office,8998
+816,Desk Organizer 9051,Office,781
+817,Gaming Laptop 4155,Computer,7065
+818,Flagship Phone 4405,Phone,628
+819,Flagship Phone 2023,Phone,1525
+820,Desk Lamp 9732,Office,3982
+821,Mouse Pad 7115,Accessories,5844
+822,Business Laptop 3490,Computer,2381
+823,Printer 5847,Office,1072
+824,Console 8927,Gaming,4705
+825,Mechanical Keyboard 4840,Computer,5402
+826,Console 1660,Gaming,4480
+827,Gaming Laptop 4643,Computer,6843
+828,Desk Lamp 4190,Office,2178
+829,Business Laptop 6534,Computer,5377
+830,Air Purifier 4502,Home,2429
+831,HDMI Cable 7505,Accessories,6886
+832,Power Bank 8547,Electronics,1625
+833,Phone Case 7549,Accessories,4658
+834,Air Purifier 140,Home,5462
+835,Desk Organizer 5969,Office,1626
+836,Printer 6616,Office,1137
+837,Business Laptop 8205,Computer,7139
+838,5G Phone 5633,Phone,5389
+839,Game Controller 9375,Gaming,9568
+840,Notebook 893,Office,8051
+841,Power Bank 366,Electronics,1731
+842,Power Bank 7579,Electronics,2688
+843,Smart TV 2261,Electronics,7109
+844,Laptop Stand 4589,Accessories,5045
+845,Bluetooth Headset 1450,Electronics,6005
+846,Smartphone 6593,Phone,2811
+847,Laptop Stand 7132,Accessories,5105
+848,USB Cable 117,Accessories,1594
+849,Gaming Laptop 2274,Computer,7912
+850,Console 7391,Gaming,3805
+851,Bluetooth Headset 2075,Electronics,232
+852,Desk Lamp 7926,Office,7019
+853,Power Bank 1563,Electronics,3851
+854,USB Cable 5233,Accessories,1778
+855,Android Phone 6370,Phone,5002
+856,Desk Lamp 1220,Office,2281
+857,Gaming Mouse 2788,Gaming,9328
+858,Coffee Machine 2580,Home,5853
+859,Coffee Machine 1520,Home,7348
+860,Wireless Speaker 9759,Electronics,2393
+861,Phone Case 7135,Accessories,6391
+862,Android Phone 4637,Phone,2390
+863,Laptop Stand 9166,Accessories,1480
+864,Console 4768,Gaming,9930
+865,Notebook 3466,Office,539
+866,Game Controller 6518,Gaming,8448
+867,Android Phone 8208,Phone,994
+868,Coffee Machine 8285,Home,1947
+869,USB Cable 8755,Accessories,9830
+870,Bluetooth Headset 2262,Electronics,6016
+871,Blender 6086,Home,9412
+872,Gaming Chair 1295,Gaming,2930
+873,Wireless Speaker 325,Electronics,9723
+874,Smartphone 1090,Phone,3634
+875,Printer 4793,Office,6620
+876,HDMI Cable 7039,Accessories,8309
+877,USB Cable 8891,Accessories,6690
+878,Gaming Headset 1469,Gaming,2601
+879,Budget Phone 3429,Phone,1394
+880,Printer 5453,Office,2645
+881,Air Fryer 5181,Home,9708
+882,Laptop Stand 1048,Accessories,7267
+883,Desktop PC 2000,Computer,1512
+884,Vacuum Cleaner 2977,Home,1001
+885,Smart TV 285,Electronics,307
+886,Mechanical Keyboard 8668,Computer,8233
+887,Game Controller 6192,Gaming,4347
+888,Gaming Laptop 580,Computer,4503
+889,5G Phone 8682,Phone,7134
+890,Smart Watch 1362,Electronics,4408
+891,Air Purifier 6000,Home,7557
+892,Smart Watch 2834,Electronics,8285
+893,5G Phone 1785,Phone,2677
+894,Game Controller 8436,Gaming,1989
+895,Wireless Speaker 4106,Electronics,821
+896,Bluetooth Headset 6374,Electronics,7829
+897,Gaming Laptop 9158,Computer,3032
+898,Desk Lamp 5372,Office,6970
+899,Mechanical Keyboard 4544,Computer,6919
+900,Printer 6208,Office,1376
+901,Wireless Speaker 3038,Electronics,8325
+902,Gaming Laptop 6668,Computer,8550
+903,Bluetooth Headset 5190,Electronics,7720
+904,Budget Phone 7583,Phone,1515
+905,Smart TV 4877,Electronics,6144
+906,Console 4074,Gaming,5079
+907,Air Purifier 8183,Home,6133
+908,Printer 4116,Office,3301
+909,Desktop PC 491,Computer,204
+910,Mechanical Keyboard 257,Computer,8972
+911,Flagship Phone 5138,Phone,123
+912,Smart Watch 4002,Electronics,3461
+913,Air Fryer 2432,Home,8161
+914,USB Cable 819,Accessories,4684
+915,Desktop PC 6202,Computer,8615
+916,Air Purifier 1665,Home,1491
+917,Gaming Chair 1326,Gaming,2287
+918,Gaming Mouse 7226,Gaming,9403
+919,Laptop Stand 4878,Accessories,2241
+920,Flagship Phone 5445,Phone,5261
+921,5G Phone 3927,Phone,7517
+922,Smart TV 9679,Electronics,3421
+923,Wireless Speaker 2793,Electronics,2646
+924,Vacuum Cleaner 6760,Home,7735
+925,Bluetooth Headset 3501,Electronics,8880
+926,Blender 4441,Home,5151
+927,Office Chair 2682,Office,2064
+928,Printer 760,Office,5084
+929,Business Laptop 1594,Computer,5470
+930,Phone Case 6592,Accessories,4166
+931,Gaming Headset 4362,Gaming,902
+932,Office Chair 6725,Office,2948
+933,Printer 9113,Office,7508
+934,Desktop PC 1769,Computer,1651
+935,Office Chair 295,Office,2390
+936,Smart TV 3346,Electronics,3741
+937,Notebook 1476,Office,6663
+938,Gaming Headset 1328,Gaming,9702
+939,Smart TV 7365,Electronics,1156
+940,Office Chair 5532,Office,2210
+941,Power Bank 929,Electronics,799
+942,Desktop PC 6571,Computer,9502
+943,Blender 7090,Home,583
+944,Business Laptop 3166,Computer,5899
+945,Flagship Phone 2535,Phone,4685
+946,Bluetooth Headset 8273,Electronics,4126
+947,Blender 1099,Home,9122
+948,Power Bank 2348,Electronics,4683
+949,Air Purifier 4182,Home,3367
+950,USB Cable 6366,Accessories,9007
+951,Desk Organizer 9021,Office,5983
+952,Notebook 9367,Office,8040
+953,Gaming Chair 4530,Gaming,5369
+954,Mechanical Keyboard 9883,Computer,527
+955,Mechanical Keyboard 1059,Computer,580
+956,Printer 5956,Office,7828
+957,Desk Lamp 2715,Office,9668
+958,Smart TV 4466,Electronics,4160
+959,Game Controller 9532,Gaming,1016
+960,Notebook 2946,Office,6463
+961,Monitor 5310,Computer,3975
+962,Printer 562,Office,5978
+963,Mouse Pad 9334,Accessories,5861
+964,Business Laptop 8164,Computer,9325
+965,Game Controller 8135,Gaming,5163
+966,Wireless Speaker 3911,Electronics,1578
+967,Gaming Mouse 8725,Gaming,3684
+968,Vacuum Cleaner 3400,Home,111
+969,Notebook 3007,Office,2237
+970,Office Chair 459,Office,5401
+971,Business Laptop 1917,Computer,9711
+972,Notebook 1288,Office,8722
+973,Budget Phone 1755,Phone,6581
+974,5G Phone 2335,Phone,5044
+975,Desktop PC 5298,Computer,7257
+976,Monitor 5946,Computer,9307
+977,Business Laptop 6299,Computer,9749
+978,Android Phone 3011,Phone,4925
+979,Mouse Pad 6515,Accessories,129
+980,Office Chair 3083,Office,9397
+981,Console 3719,Gaming,5313
+982,USB Cable 8229,Accessories,9365
+983,Gaming Laptop 3999,Computer,5525
+984,Android Phone 1553,Phone,5334
+985,Desk Organizer 286,Office,5600
+986,Android Phone 1210,Phone,3535
+987,Smartphone 120,Phone,4305
+988,Power Bank 6975,Electronics,6423
+989,Desktop PC 6304,Computer,6883
+990,Flagship Phone 1761,Phone,9046
+991,Printer 3795,Office,7955
+992,Gaming Laptop 647,Computer,7493
+993,5G Phone 4378,Phone,428
+994,Bluetooth Headset 2887,Electronics,1315
+995,Air Fryer 9062,Home,2736
+996,Smart Watch 8009,Electronics,5636
+997,HDMI Cable 2803,Accessories,607
+998,Game Controller 977,Gaming,7213
+999,Smart TV 3212,Electronics,5524
+1000,Air Purifier 4446,Home,9178
